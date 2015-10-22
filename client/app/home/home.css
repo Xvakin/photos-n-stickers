@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home-photo-area {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+.home-sticker-sidebar {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 150px;
+    width: 150px;
+}
