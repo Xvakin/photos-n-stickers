@@ -4,10 +4,12 @@ import {PhotoAreaController as controller} from './photo-area.controller';
 
 let PhotoAreaComponent = function(){
     return {
-        template,
+        bindToController: true,
         controller,
+        controllerAs: 'photoAreaCtrl',
         restrict: 'E',
-        replace: true
+        replace: true,
+        template
     };
 };
 

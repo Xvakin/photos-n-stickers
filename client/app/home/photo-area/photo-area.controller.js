@@ -1,9 +1,13 @@
 class PhotoAreaController {
-    constructor($log) {
+    constructor($scope) {
+        this.photoDataURI = '';
+    }
 
+    startOver() {
+        this.photoDataURI = '';
     }
 }
 
-PhotoAreaController.$inject = ['$log'];
+PhotoAreaController.$inject = ['$scope'];
 
 export {PhotoAreaController};

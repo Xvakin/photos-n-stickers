@@ -1,3 +1,11 @@
 <div class="photo-area">
-    Photo Area
+    <div class="photo-area-header">
+        <photo-input photo-data-uri="photoAreaCtrl.photoDataURI" ng-show="!photoAreaCtrl.photoDataURI"></photo-input>
+        <div ng-hide="!photoAreaCtrl.photoDataURI">
+            <a href="" ng-click="photoAreaCtrl.startOver()">Start Over</a>
+        </div>
+    </div>
+    <div class="photo-area-body">
+        <photo photo-data-uri="photoAreaCtrl.photoDataURI"></photo>
+    </div>
 </div>

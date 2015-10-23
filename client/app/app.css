@@ -1,3 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
 body {
-    display: flex;
+    font-size: 16px;
+    height: 100%;
+    line-height: 24px;
+}
+
+a {
+    color: #337ab7;
 }
