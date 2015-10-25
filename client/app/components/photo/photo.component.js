@@ -10,7 +10,8 @@ let PhotoComponent = function(){
         replace: true,
         restrict: 'E',
         scope: {
-            photoDataUri: '='
+            photoDataUri: '=',
+            stickers: '='
         },
         template
     };

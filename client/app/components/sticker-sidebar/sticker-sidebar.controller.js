@@ -2,9 +2,9 @@ import stickerUploadModalTemplate from '../sticker-upload-modal/sticker-upload-m
 import {StickerUploadModalController} from '../sticker-upload-modal/sticker-upload-modal.controller';
 
 class StickerSidebarController {
-    constructor($uibModal, stickers) {
+    constructor($uibModal, stickersService) {
         this.$uibModal = $uibModal;
-        this.stickers = stickers.getStickers();
+        this.stickers = stickersService.getStickers();
     }
 
     showModal() {
@@ -21,6 +21,6 @@ class StickerSidebarController {
     }
 }
 
-StickerSidebarController.$inject = ['$uibModal', 'stickers'];
+StickerSidebarController.$inject = ['$uibModal', 'stickersService'];
 
 export {StickerSidebarController};

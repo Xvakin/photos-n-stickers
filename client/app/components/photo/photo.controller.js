@@ -1,10 +1,9 @@
 import $ from 'jquery';
 
 class PhotoController {
-    constructor($element, photoStickers) {
+    constructor($element, photoService) {
         this.$element = $element;
-        this.photoStickers = photoStickers;
-        this.stickers = photoStickers.getStickers();
+        this.photoService = photoService;
     }
 
     onDrop(data, event) {
@@ -19,10 +18,10 @@ class PhotoController {
         newSticker.left = elOffsetX - newSticker.mouseX + 'px';
         newSticker.top = elOffsetY - newSticker.mouseY + 'px';
         newSticker.isAdded = true;
-        this.photoStickers.addSticker(newSticker);
+        this.photoService.addSticker(newSticker);
     }
 }
 
-PhotoController.$inject = ['$element', 'photoStickers'];
+PhotoController.$inject = ['$element', 'photoService'];
 
 export {PhotoController};

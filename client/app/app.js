@@ -5,7 +5,7 @@ import 'angular-ui-bootstrap';
 import 'angular-draganddrop';
 import 'angular-local-storage';
 import {homeModule, inputFileModule, photoModule, photoAreaModule, photoStickerModule, stickerModule, stickerSidebarModule} from './components/components';
-import {photoStickersServiceModule, stickersServiceModule} from './services/services';
+import {photoServiceModule, stickersServiceModule} from './services/services';
 
 angular.module('app', [
     'ui.bootstrap',
@@ -18,13 +18,13 @@ angular.module('app', [
     photoStickerModule.name,
     stickerModule.name,
     stickerSidebarModule.name,
-    photoStickersServiceModule.name,
+    photoServiceModule.name,
     stickersServiceModule.name
 ]);
 
 angular.module('app').config(function (localStorageServiceProvider) {
     localStorageServiceProvider
-        .setPrefix('photos-n-stickers');
+        .setPrefix('app');
 });
 
 angular.bootstrap(document, ['app']);

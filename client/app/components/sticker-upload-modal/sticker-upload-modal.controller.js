@@ -1,14 +1,14 @@
 class StickerUploadModalController {
-    constructor($uibModalInstance, stickers) {
+    constructor($uibModalInstance, stickersService) {
         this.$uibModalInstance = $uibModalInstance;
-        this.stickers = stickers;
+        this.stickersService = stickersService;
         this.newStickerForm = {};
         this.newStickerName = '';
         this.newStickerFile = '';
     }
 
     submitNewStickerForm() {
-        this.stickers.addSticker({
+        this.stickersService.addSticker({
             name: this.newStickerName,
             file: this.newStickerFile
         });
@@ -24,6 +24,6 @@ class StickerUploadModalController {
     }
 }
 
-StickerUploadModalController.$inject = ['$uibModalInstance', 'stickers'];
+StickerUploadModalController.$inject = ['$uibModalInstance', 'stickersService'];
 
 export {StickerUploadModalController};

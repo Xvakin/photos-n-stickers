@@ -10,6 +10,10 @@ let StickersService = (localStorageService) => {
         localStorageService.set('stickers', stickers);
     };
 
+    let removeSticker = () => {
+
+    };
+
     return {
         addSticker,
         getStickers

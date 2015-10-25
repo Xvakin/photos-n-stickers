@@ -2,7 +2,9 @@ import angular from 'angular';
 
 function inputFileLink(scope, element, attrs, ngModel) {
     ngModel.$render = function (val) {
-        ngModel.$setViewValue(val);
+        if (val) {
+            ngModel.$setViewValue(val);
+        }
     };
 
     element.bind('change', (event) => {

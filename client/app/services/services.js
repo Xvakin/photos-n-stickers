@@ -1,4 +1,4 @@
-import {photoStickersServiceModule} from './photo-stickers/photo-stickers';
+import {photoServiceModule} from './photo/photo';
 import {stickersServiceModule} from './stickers/stickers';
 
-export {photoStickersServiceModule, stickersServiceModule};
+export {photoServiceModule, stickersServiceModule};
