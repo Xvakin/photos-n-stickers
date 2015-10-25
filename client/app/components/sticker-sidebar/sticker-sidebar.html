@@ -1,10 +1,11 @@
 <div class="sticker-sidebar">
     <div class="sticker-sidebar-header">
-        <a class="btn" href="" ng-click="stickerSidebarCtrl.showModal()">Upload new sticker</a>
+        <a class="btn btn-success btn-sm" href="" ng-click="stickerSidebarCtrl.showModal()"><span class="glyphicon glyphicon-plus"></span>  Upload new sticker</a>
     </div>
     <div class="sticker-sidebar-list">
         <div class="sticker-sidebar-list-item" ng-repeat="sticker in stickerSidebarCtrl.stickers | orderBy : '' : true">
             <sticker data="sticker"></sticker>
+            <h5>{{sticker.name}}</h5>
         </div>
     </div>
     <script type="text/ng-template" id="myModalContent.html">

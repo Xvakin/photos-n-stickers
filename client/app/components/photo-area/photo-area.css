@@ -1,15 +1,10 @@
 .photo-area {
-    background: #eee;
+    background: #fafafa;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
-}
-
-.photo-area-header {
-    flex-grow: 1;
-    flex-basis: 0;
-    max-height: 50px;
+    position: relative;
 }
 
 .photo-area-body {
@@ -17,4 +12,40 @@
     flex-basis: 0;
     max-height: 100%;
     position: relative;
+}
+
+.photo-area-file {
+    height: 100%;
+    position: relative;
+}
+
+.photo-area-file-input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.photo-area-file-title {
+    text-align: center;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+
+}
+
+.photo-area-start-over {
+    left: 10px;
+    opacity: 0.5;
+    position: absolute;
+    top: 10px;
+    z-index: 20;
+    transition: opacity 0.3s;
+}
+
+.photo-area-start-over:hover {
+    opacity: 1;
 }

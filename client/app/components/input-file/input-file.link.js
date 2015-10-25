@@ -18,7 +18,9 @@ function inputFileLink(scope, element, attrs, ngModel) {
                 });
             };
         })(f);
-        reader.readAsDataURL(f);
+        if (f) {
+            reader.readAsDataURL(f);
+        }
     });
 
 }

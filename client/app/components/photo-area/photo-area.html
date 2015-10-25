@@ -1,13 +1,12 @@
 <div class="photo-area">
-    <div class="photo-area-header">
-        <div ng-hide="photoAreaCtrl.photoDataUri">
-            <input type="file" input-file ng-model="photoAreaCtrl.photoDataUri" />
-        </div>
-        <div ng-show="photoAreaCtrl.photoDataUri">
-            <a class="btn" href="" ng-click="photoAreaCtrl.startOver()">Start Over</a>
-        </div>
+    <div class="photo-area-file" ng-hide="photoAreaCtrl.photoDataUri">
+        <input class="photo-area-file-input" type="file" input-file ng-model="photoAreaCtrl.photoDataUri" />
+        <p class="photo-area-file-title">Click to upload or drag an image</p>
     </div>
-    <div class="photo-area-body">
+    <div class="photo-area-start-over" ng-show="photoAreaCtrl.photoDataUri">
+        <a class="btn btn-default btn-sm" href="" ng-click="photoAreaCtrl.startOver()"><span class="glyphicon glyphicon-refresh"></span> Start Over</a>
+    </div>
+    <div class="photo-area-body" ng-show="photoAreaCtrl.photoDataUri">
         <photo photo-data-uri="photoAreaCtrl.photoDataUri" stickers="photoAreaCtrl.stickers"></photo>
     </div>
 </div>

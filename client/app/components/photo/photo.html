@@ -1,14 +1,16 @@
-<div class="photo" ng-show="photoCtrl.photoDataUri">
-    <div class="photo-container"
-         drop="photoCtrl.onDrop($data, $event)"
-         drop-effect="copy"
-         drop-accept="'json/sticker'"
-         drag-over="onDragOver($event)"
-         drag-over-class="drag-over-accept">
-        <img class="photo-img" ng-src="{{photoCtrl.photoDataUri}}" alt=""/>
-        <div class="photo-stickers">
-            <div ng-repeat="sticker in photoCtrl.stickers">
-                <photo-sticker data="sticker"></photo-sticker>
+<div class="photo">
+    <div class="photo-container">
+        <div class="photo-container-drop"
+             drop="photoCtrl.onDrop($data, $event)"
+             drop-effect="copy"
+             drop-accept="'json/sticker'"
+             drag-over="onDragOver($event)"
+             drag-over-class="drag-over-accept">
+            <img class="photo-img" ng-src="{{photoCtrl.photoDataUri}}"/>
+            <div class="photo-stickers">
+                <div ng-repeat="sticker in photoCtrl.stickers">
+                    <photo-sticker data="sticker"></photo-sticker>
+                </div>
             </div>
         </div>
     </div>

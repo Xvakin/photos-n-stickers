@@ -1,12 +1,10 @@
 .sticker {
-    background: #fff;
-    border: 1px solid #eee;
     cursor: move;
-    padding: 10px;
     text-align: center;
     width: 150px;
 }
 
 .sticker-img {
-    max-width: 100%;
+    max-width: 150px;
+    max-height: 150px;
 }

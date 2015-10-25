@@ -1,18 +1,21 @@
 class PhotoAreaController {
     constructor($scope, photoService) {
         this.photoService = photoService;
-        this.photoDataUri = photoService.getPhotoDataUri();
-        this.stickers = photoService.getStickers();
+        this.init();
 
         $scope.$watch(() => this.photoDataUri, (dataUri) => {
             photoService.updatePhotoDataUri(dataUri);
         });
     }
 
+    init() {
+        this.photoDataUri = this.photoService.getPhotoDataUri();
+        this.stickers = this.photoService.getStickers();
+    }
+
     startOver() {
-        this.photoDataUri = '';
-        this.stickers = [];
         this.photoService.clearPhoto();
+        this.init()
     }
 }
 

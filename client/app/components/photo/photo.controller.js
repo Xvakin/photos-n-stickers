@@ -12,9 +12,9 @@ class PhotoController {
 
     addSticker(data, event) {
         let newSticker = data['json/sticker']['data'];
-        const el = $(this.$element);
-        const elOffsetX = event.clientX - el.offset().left;
-        const elOffsetY = event.clientY - el.offset().top;
+        const dropEl = $(this.$element).find('.photo-container-drop');
+        const elOffsetX = event.clientX - dropEl.offset().left;
+        const elOffsetY = event.clientY - dropEl.offset().top;
         newSticker.left = elOffsetX - newSticker.mouseX + 'px';
         newSticker.top = elOffsetY - newSticker.mouseY + 'px';
         newSticker.isAdded = true;

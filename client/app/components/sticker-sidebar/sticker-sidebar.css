@@ -1,5 +1,12 @@
 .sticker-sidebar {
     height: 100%;
+    overflow-y: auto;
+    padding: 10px 0 0;
+}
+
+.sticker-sidebar-header {
+    margin: 0 0 20px;
+    text-align: center;
 }
 
 .sticker-sidebar-list {
@@ -7,5 +14,7 @@
 }
 
 .sticker-sidebar-list-item {
-    margin: 0 0 10px;
+    color: #999;
+    margin: 0 0 20px;
+    text-align: center;
 }
