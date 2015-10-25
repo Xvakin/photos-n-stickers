@@ -1,8 +1,8 @@
 import stickerUploadModalTemplate from '../sticker-upload-modal/sticker-upload-modal.html';
-import StickerUploadModalController from '../sticker-upload-modal/sticker-upload-modal.controller';
+import {StickerUploadModalController} from '../sticker-upload-modal/sticker-upload-modal.controller';
 
 class StickerSidebarController {
-    constructor($uibModal) {
+    constructor($uibModal, stickers) {
         this.$uibModal = $uibModal;
         this.stickers = [
             {
@@ -30,6 +30,6 @@ class StickerSidebarController {
     }
 }
 
-StickerSidebarController.$inject = ['$uibModal'];
+StickerSidebarController.$inject = ['$uibModal', 'stickers'];
 
 export {StickerSidebarController};

@@ -1,7 +1,8 @@
 class StickerUploadModalController {
     constructor($uibModalInstance) {
         this.$uibModalInstance = $uibModalInstance;
-        console.log(this);  
+        this.newStickerForm = {};
+        this.newStickerName = '';
     }
 
     ok() {
@@ -9,8 +10,11 @@ class StickerUploadModalController {
         this.$uibModalInstance.close();
     }
 
-    cancel() {
-        console.log('ok');
+    isSubmitDisabled() {
+        return this.newStickerForm.$invalid;
+    }
+
+    close() {
         this.$uibModalInstance.dismiss();
     }
 }

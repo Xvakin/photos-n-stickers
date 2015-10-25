@@ -1,12 +1,30 @@
 <div>
     <div class="modal-header">
-        <h3 class="modal-title">Upload new sticker</h3>
+        <button type="button" class="close" ng-click="stickerUploadModalCtrl.close()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Upload New Sticker</h4>
     </div>
-    <div class="modal-body">
-        {{stickerUploadModalCtrl}}
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="stickerUploadModalCtrl.ok()">OK</button>
-        <button class="btn btn-warning" type="button" ng-click="stickerUploadModalCtrl.cancel()">Cancel</button>
-    </div>
+    <form name="stickerUploadModalCtrl.newStickerForm" class="form-horizontal" ng-submit="stickerUploadModalCtrl.submitNewStickerForm()" novalidate>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="image" class="col-sm-2 control-label">Image</label>
+                <div class="col-sm-6">
+                    <input ng-model="stickerUploadModalCtrl.newStickerFile" type="file" id="image" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-6">
+                    <input ng-model="stickerUploadModalCtrl.newStickerName" type="text" class="form-control" id="name" placeholder="New sticker" required>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary"
+                    type="submit"
+                    ng-disabled="stickerUploadModalCtrl.isSubmitDisabled()">
+                Add Sticker
+            </button>
+        </div>
+    </form>
+
 </div>
