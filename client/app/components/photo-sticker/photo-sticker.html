@@ -1,0 +1,10 @@
+<div class="sticker"
+     ng-style="{top: photoStickerCtrl.data.top, left: photoStickerCtrl.data.left}"
+     draggable="true"
+     effect-allowed="copy"
+     draggable-type="sticker"
+     draggable-data="{data: stickerCtrl.data}">
+    <h3>{{::photoStickerCtrl.data.name}}</h3>
+    <img ng-src="{{photoStickerCtrl.data.imageDataURI}}" alt=""/>
+    {{photoStickerCtrl.data.mouseX}} {{photoStickerCtrl.data.mouseY}}
+</div>

@@ -1,0 +1,8 @@
+.sticker {
+    background: #fff;
+    border: 1px solid #eee;
+    cursor: move;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+}

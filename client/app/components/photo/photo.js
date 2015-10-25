@@ -1,5 +1,5 @@
 import angular from 'angular';
-import {PhotoComponent} from './photo.component';
+import {PhotoComponent} from './photo.component.js';
 
 let photoModule = angular.module('photo', []);
 

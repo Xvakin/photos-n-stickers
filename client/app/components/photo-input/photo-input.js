@@ -1,5 +1,5 @@
 import angular from 'angular';
-import {PhotoInputComponent} from './photo-input.component';
+import {PhotoInputComponent} from './photo-input.component.js';
 
 let photoInputModule = angular.module('photoInput', []);
 

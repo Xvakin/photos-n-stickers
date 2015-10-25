@@ -1,5 +1,5 @@
 import angular from 'angular';
-import {StickerSidebarComponent} from './sticker-sidebar.component';
+import {StickerSidebarComponent} from './sticker-sidebar.component.js';
 
 let stickerSidebarModule = angular.module('stickerSidebar', []);
 

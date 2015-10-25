@@ -1,14 +1,18 @@
 .photo {
     height: 100%;
-    position: absolute;
+    text-align: center;
     width: 100%;
+}
+
+.photo-container {
+    display: inline-block;
 }
 
 .photo-img {
     display: block;
     max-width: 100%;
-    margin: 0 auto;
+}
+
+.photo .sticker {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }

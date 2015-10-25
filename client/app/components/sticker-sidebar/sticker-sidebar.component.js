@@ -4,10 +4,11 @@ import {StickerSidebarController as controller} from './sticker-sidebar.controll
 
 let StickerSidebarComponent = function(){
     return {
-        template,
         controller,
+        controllerAs: 'stickerSidebarCtrl',
         restrict: 'E',
-        replace: true
+        replace: true,
+        template
     };
 };
 
