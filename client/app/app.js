@@ -6,6 +6,7 @@ import 'angular-draganddrop';
 import 'angular-local-storage';
 import {homeModule, inputFileModule, photoModule, photoAreaModule, photoStickerModule, stickerModule, stickerSidebarModule} from './components/components';
 import {photoServiceModule, stickersServiceModule} from './services/services';
+import {config} from './config';
 
 angular.module('app', [
     'ui.bootstrap',
@@ -22,9 +23,6 @@ angular.module('app', [
     stickersServiceModule.name
 ]);
 
-angular.module('app').config(function (localStorageServiceProvider) {
-    localStorageServiceProvider
-        .setPrefix('app');
-});
+angular.module('app').config(config);
 
 angular.bootstrap(document, ['app']);
