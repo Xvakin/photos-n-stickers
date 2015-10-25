@@ -1,5 +1,5 @@
-let StickersService = () => {
-    let stickers = [];
+let StickersService = (localStorageService) => {
+    let stickers = localStorageService.get('stickers') || [];
 
     let getStickers = () => {
         return stickers;
@@ -7,6 +7,7 @@ let StickersService = () => {
 
     let addSticker = (stickerData) => {
         stickers.push(stickerData);
+        localStorageService.set('stickers', stickers);
     };
 
     return {
@@ -14,5 +15,7 @@ let StickersService = () => {
         getStickers
     };
 };
+
+StickersService.$inject = ['localStorageService'];
 
 export {StickersService};

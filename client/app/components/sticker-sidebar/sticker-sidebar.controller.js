@@ -14,6 +14,10 @@ class StickerSidebarController {
             controllerAs: 'stickerUploadModalCtrl',
             template: stickerUploadModalTemplate
         });
+
+        modalInstance.result.then(function () {
+
+        });
     }
 }
 

@@ -4,7 +4,6 @@ import {PhotoAreaController as controller} from './photo-area.controller';
 
 let PhotoAreaComponent = function(){
     return {
-        bindToController: true,
         controller,
         controllerAs: 'photoAreaCtrl',
         restrict: 'E',

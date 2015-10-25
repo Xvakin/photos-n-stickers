@@ -1,9 +1,7 @@
 class HomeController {
-    constructor($log) {
+    constructor() {
 
     }
 }
-
-HomeController.$inject = ['$log'];
 
 export {HomeController};

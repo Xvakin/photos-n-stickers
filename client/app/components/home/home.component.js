@@ -4,10 +4,11 @@ import {HomeController as controller} from './home.controller';
 
 let HomeComponent = function(){
     return {
-        template,
         controller,
+        controllerAs: 'homeCtrl',
         restrict: 'E',
-        replace: true
+        replace: true,
+        template
     };
 };
 
