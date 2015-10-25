@@ -4,16 +4,7 @@ import {StickerUploadModalController} from '../sticker-upload-modal/sticker-uplo
 class StickerSidebarController {
     constructor($uibModal, stickers) {
         this.$uibModal = $uibModal;
-        this.stickers = [
-            {
-                id: 0,
-                name: 'Sticker 1'
-            },
-            {
-                id: 0,
-                name: 'Sticker 2'
-            }
-        ];
+        this.stickers = stickers.getStickers();
     }
 
     showModal() {
@@ -22,10 +13,6 @@ class StickerSidebarController {
             controller: StickerUploadModalController,
             controllerAs: 'stickerUploadModalCtrl',
             template: stickerUploadModalTemplate
-        });
-
-        modalInstance.result.then(function () {
-
         });
     }
 }

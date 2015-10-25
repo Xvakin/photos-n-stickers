@@ -1,10 +1,10 @@
 class PhotoAreaController {
     constructor($scope) {
-        this.photoDataURI = '';
+        this.photoDataUri = 'qweqwe';
     }
 
     startOver() {
-        this.photoDataURI = '';
+        this.photoDataUri = '';
     }
 }
 

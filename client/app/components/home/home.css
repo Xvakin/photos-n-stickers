@@ -11,6 +11,7 @@
     flex-basis: 0;
     height: 100%;
     max-width: 100%;
+    overflow: hidden;
 }
 
 .home-sticker-sidebar {

@@ -3,8 +3,8 @@ import './app.css';
 import angular from 'angular';
 import 'angular-ui-bootstrap';
 import 'angular-draganddrop';
-import {homeModule, inputFileModule, photoModule, photoAreaModule, photoInputModule, photoStickerModule, stickerModule, stickerSidebarModule} from './components/components';
-import {stickersServiceModule} from './services/services';
+import {homeModule, inputFileModule, photoModule, photoAreaModule, photoStickerModule, stickerModule, stickerSidebarModule} from './components/components';
+import {photoStickersServiceModule, stickersServiceModule} from './services/services';
 
 angular.module('app', [
     'ui.bootstrap',
@@ -13,10 +13,10 @@ angular.module('app', [
     inputFileModule.name,
     photoModule.name,
     photoAreaModule.name,
-    photoInputModule.name,
     photoStickerModule.name,
     stickerModule.name,
     stickerSidebarModule.name,
+    photoStickersServiceModule.name,
     stickersServiceModule.name
 ]);
 

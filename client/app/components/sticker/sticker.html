@@ -4,7 +4,6 @@
      effect-allowed="copy"
      draggable-type="sticker"
      draggable-data="{data: stickerCtrl.data}">
-    <h3>{{::stickerCtrl.data.name}}</h3>
-    <img ng-src="" alt=""/>
-    {{stickerCtrl.data.mouseX}} {{stickerCtrl.data.mouseY}}
+    <h3>{{stickerCtrl.data.name}}</h3>
+    <img class="sticker-img" ng-src="{{stickerCtrl.data.file}}" alt=""/>
 </div>

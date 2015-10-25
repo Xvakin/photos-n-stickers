@@ -1,13 +1,13 @@
 <div class="photo-area">
     <div class="photo-area-header">
-        <div>
-            <input type="file" input-file ng-model="photoAreaCtrl.photoDataURI" />
+        <div ng-hide="photoAreaCtrl.photoDataUri">
+            <input type="file" input-file ng-model="photoAreaCtrl.photoDataUri" />
         </div>
-        <div ng-hide="!photoAreaCtrl.photoDataURI">
-            <a href="" ng-click="photoAreaCtrl.startOver()">Start Over</a>
+        <div ng-show="photoAreaCtrl.photoDataUri">
+            <a class="btn" href="" ng-click="photoAreaCtrl.startOver()">Start Over</a>
         </div>
     </div>
     <div class="photo-area-body">
-        <photo photo-data-uri="photoAreaCtrl.photoDataURI"></photo>
+        <photo photo-data-uri="photoAreaCtrl.photoDataUri"></photo>
     </div>
 </div>
